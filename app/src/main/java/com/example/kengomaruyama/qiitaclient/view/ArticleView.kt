@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
+import com.bumptech.glide.Glide
 import com.example.kengomaruyama.qiitaclient.R
 import com.example.kengomaruyama.qiitaclient.bindView
 import com.example.kengomaruyama.qiitaclient.model.Article
@@ -37,10 +38,8 @@ class ArticleView : FrameLayout {
     }
 
     fun setArticle(article: Article){
-        titleTextView?.text = article.title
-        userNameTextView?.text = article.user.name
-
-        // TODO プロフィール画像をセットする
-        profileImageView?.setBackgroundColor(Color.RED)
+        titleTextView.text = article.title
+        userNameTextView.text = article.user.name
+        Glide.with(context).load(article.user.profileImageUrl).into(profileImageView)
     }
 }
