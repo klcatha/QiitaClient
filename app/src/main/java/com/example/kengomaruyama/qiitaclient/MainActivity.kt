@@ -59,7 +59,6 @@ class MainActivity : RxAppCompatActivity() {
                         listAdapter.notifyDataSetChanged()
                     },{
                         toast("エラー:$it")
-                        toast("エラー:$it")
                     })
         }
     }
