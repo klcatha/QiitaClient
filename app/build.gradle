@@ -61,4 +61,11 @@ dependencies {
 
     androidTestImplementation 'org.mockito:mockito-core:1.10.19'
     androidTestImplementation 'com.crittercism.dexmaker:dexmaker-mockito:1.4'
+
+    implementation 'com.jakewharton:kotterknife:0.1.0-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+    maven {url 'https://oss.sonatype.org/content/repositories/snapshots/'}
 }
